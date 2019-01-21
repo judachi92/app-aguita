@@ -1,0 +1,36 @@
+.example-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .card-form{
+    max-width: 900px;
+  }
+  
+  .item{
+    width: 100%;
+  }
+
+  .titulo{
+    text-align: center;
+  }
+
+  .box {
+    float: left;
+  }
+  
+  .form-juego {
+    min-width: 150px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }

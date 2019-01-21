@@ -1,0 +1,15 @@
+.example-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  

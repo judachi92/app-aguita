@@ -1,0 +1,36 @@
+<mat-card class="producto-card">
+    <mat-card-header>
+        <mat-card-title>{{producto.titulo}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{producto.imagen}}>
+    <mat-card-title>Descripcion</mat-card-title>
+    <mat-card-content>
+      {{producto.descripcion}}
+      <br>Precio: {{producto.precio}}
+      <br>Categoria: {{producto.categoria}}
+      <br>Descuento: {{producto.descuento}}
+      <br>Fecha Inicia Descuento: {{producto.fechainicio_descuento}}
+      <br>Fecha Finaliza Descuento: {{producto.fechafin_descuento}}
+    </mat-card-content>
+    
+    <mat-card-footer>
+        <button mat-raised-button color="primary"
+        *ngIf="!btn_borrar"
+                class="full-button"
+                (click)="carrito()">
+            Adicionar Carrito
+        </button>
+        <button mat-raised-button color="primary"
+        *ngIf="btn_borrar"
+                class="full-button"
+                (click)="eliminarCarrito()">
+            Eliminar Carrito
+        </button>
+        <button mat-raised-button 
+         *ngIf="!btn_borrar"
+          routerLink="/lista" routerLinkActive="active" 
+              class="full-button">
+          Regresar
+        </button>
+    </mat-card-footer>
+  </mat-card>

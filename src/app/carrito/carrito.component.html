@@ -1,0 +1,18 @@
+<mat-card style="margin-top:15px;"
+  *ngIf="carrito_productos.length <= 0">
+  No Hay Articulos en el Carrito
+</mat-card>
+
+<div *ngIf="carrito_productos.length > 0">
+    <mat-card style="margin-top:15px;">
+    Detalles de Compra
+  </mat-card>
+  <div class="example-container" >
+
+    <app-card-producto class="box" *ngFor="let producto of carrito_productos" 
+    [producto]="producto"
+    [btn_borrar]="true"
+    (onActive)="actualizarCarrito()"
+    ></app-card-producto>
+  </div>
+</div>

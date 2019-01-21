@@ -1,0 +1,49 @@
+<div class="example-container">
+
+    <mat-card class="card-form">
+            <mat-card-title class="titulo">
+                Resgistro de Productos
+            </mat-card-title>
+            <mat-card-content>
+                
+                <mat-form-field class="item">
+                    <input id="titulo" [(ngModel)]="producto.titulo" name="titulo"  matInput placeholder="Titulo" required>
+                </mat-form-field>
+                
+                <mat-form-field class="item">
+                    <input id="descripcion" [(ngModel)]="producto.descripcion" name="descripcion" matInput placeholder="Descripcion" required/>
+                </mat-form-field>
+                
+                <mat-form-field class="item">
+                    <mat-select id="categoria" [(ngModel)]="producto.id_categoria" name="id_categoria" placeholder="Categorias" required>
+                    <mat-option *ngFor="let cat of categorias" value="{{cat.id}}">{{cat.nombre}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="item">
+                    <input id="precio" [(ngModel)]="producto.precio" name="precio" matInput type="number" placeholder="Precio" required>
+                </mat-form-field>
+
+                <mat-form-field class="item">
+                    <input id="descuento" [(ngModel)]="producto.descuento" name="descuento" matInput type="number" placeholder="Descuento">
+                </mat-form-field>
+
+                <mat-form-field class="item">
+                    <input id="fechainicio_descuento" [(ngModel)]="producto.fechainicio_descuento" name="fechainicio_descuento" matInput type="date" placeholder="Fecha Inicio Descuento">
+                </mat-form-field>
+                <mat-form-field class="item">
+                    <input id="fechafin_descuento" [(ngModel)]="producto.fechafin_descuento" name="fechafin_descuento" matInput type="date" placeholder="Fecha Fin Descuento">
+                </mat-form-field>
+
+                
+                Imagen: <input  id="imagen" type="file" [(ngModel)]="producto.imagen" name="imagen" />
+                
+                
+                
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+            </mat-card-actions>
+    </mat-card>
+</div>
